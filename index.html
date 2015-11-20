@@ -17,14 +17,28 @@
 
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings">
-          <md-icon md-svg-icon="img/ic_menu_white_24px.svg"></md-icon>
-        </md-button>
         <h2>
           <span>TrackIt</span>
         </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/ic_more_vert_white_24px.svg"></md-icon>
+        </md-button>
       </div>
     </md-toolbar>
+
+    <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always">
+      <md-tab label="diary">
+        <md-content class="md-padding">
+        <!-- Diary tab content -->
+        </md-content>
+      </md-tab>
+      <md-tab label="results">
+        <md-content class="md-padding">
+        <!-- Results tab content -->
+        </md-content>
+      </md-tab>
+    </md-tabs>
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Angular Material Dependencies -->
