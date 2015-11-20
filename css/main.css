@@ -10,3 +10,6 @@
   position: relative;
 }
 
+.card-header {
+    width: 100%;
+}
