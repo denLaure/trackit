@@ -2,11 +2,11 @@
 	Project: Trackit Diet/Symptoms tracker
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="TrackIt">
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<title>TrackШt</title>
+	<title>TrackIt</title>
 
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.css">
 	<link href="css/main.css" type="text/css" rel="stylesheet"/>
@@ -14,6 +14,18 @@
 
 <body>
 
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings">
+          <md-icon md-svg-icon="img/ic_menu_white_24px.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span>TrackIt</span>
+        </h2>
+      </div>
+    </md-toolbar>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Angular Material Dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
