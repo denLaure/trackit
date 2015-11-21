@@ -39,6 +39,58 @@
       <md-tab label="results">
         <md-content class="md-padding">
         <!-- Results tab content -->
+
+        <section>
+        <h3>Food</h3>
+        <md-list>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Milk</h3></div><div flex="5"></div><div flex="5"><p>75%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="70"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Cabbage</h3></div><div flex="5"></div><div flex="5"><p>53%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="53"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Beans</h3></div><div flex="5"></div><div flex="5"><p>43%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="43"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+        </md-list>
+
+        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <div flex><md-button class="md-raised md-primary">View More</md-button></div>
+        </div>
+
+        </section>
+
         </md-content>
       </md-tab>
     </md-tabs>
@@ -53,11 +105,11 @@
 
         <md-fab-actions>
           <md-button aria-label="Symptom" class="md-fab md-raised md-mini">
-            <md-tooltip md-direction="left" md-visible="true"> Symptom</md-tooltip>
+            <md-tooltip md-direction="left" md-visible="false"> Symptom</md-tooltip>
             <md-icon md-svg-src="img/ic_error_outline_white_24px.svg"></md-icon> 
           </md-button>
           <md-button aria-label="Meal" class="md-fab md-raised md-mini">
-            <md-tooltip md-direction="left" md-visible="true ">Meal</md-tooltip>
+            <md-tooltip md-direction="left" md-visible="fallse ">Meal</md-tooltip>
             <md-icon md-svg-src="img/ic_restaurant_menu_white_24px.svg"></md-icon>
           </md-button>
         </md-fab-actions>
