@@ -6,6 +6,11 @@
     padding: 16px;
  }
 
+ .md-padding {
+    padding-right: 0;
+    padding-left: 0;
+ }
+
  md-whiteframe[md-ink-ripple] {
   position: relative;
 }
