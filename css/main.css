@@ -18,3 +18,17 @@
 .card-header {
     width: 100%;
 }
+
+.time {
+    padding-right: 16px;
+    border-right: solid #c2c2c2;
+    vertical-align: middle;
+}
+
+.diary-item {
+    margin-left: 16px;
+}
+
+.card-content {
+    width: 100%;
+}
