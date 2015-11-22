@@ -36,3 +36,7 @@
     width: 100%;
     margin-top: 16px;
 }
+
+md-fab-speed-dial {
+    position: fixed !important;
+}
