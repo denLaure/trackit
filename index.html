@@ -38,10 +38,12 @@
       </md-tab>
       <md-tab label="results">
         <md-content class="md-padding">
-        <!-- Results tab content -->
-
+<!-- Results tab content -->
+        <div layout="column" flex="90" layout-margin>
+<!-- Food Intolerance -->
         <section>
-        <h3>Food</h3>
+        <h3>Food Intolerance</h3>
+        <md-divider ></md-divider>
         <md-list>
 
           <md-list-item class="md-2-line">
@@ -91,11 +93,43 @@
 
         </section>
 
+      <section>
+        <h3>Symptoms</h3>
+        <md-divider ></md-divider>
+        <p>Monthly Frequency</p>
+        <md-list>
+
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Nausea</h3></div><div flex="10"><p>10</p></div><div flex="20"><p>times</p></div>
+            </div>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Bloating</h3></div><div flex="10"><p>4</p></div><div flex="20"><p>times</p></div>
+            </div>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Gastric Reflux</h3></div><div flex="10"><p>2</p></div><div flex="20"><p>times</p></div>
+            </div>
+          </div>
+        </md-list-item>        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <div flex><md-button class="md-raised md-primary">View More</md-button></div>
+        </div>
+
+        </section>
+      </div>
         </md-content>
       </md-tab>
     </md-tabs>
 
-        <!--Speed dial FAB Button -->
+      <!--Speed dial FAB Button -->
       <md-fab-speed-dial md-direction="up" class="md-fling md-fab-bottom-right">
         <md-fab-trigger>
           <md-button aria-label="menu" class="md-fab md-warn">
