@@ -83,31 +83,116 @@
       </md-tab>
       <md-tab label="results">
         <md-content class="md-padding">
+<!-- Results tab content -->
+        <div layout="column" flex="90" layout-margin>
+<!-- Food Intolerance -->
+        <section>
+        <h3>Food Intolerance</h3>
+        <md-divider ></md-divider>
+        <md-list>
 
-        <md-fab-speed-dial md-direction="right" class="md-fling">
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Milk</h3></div><div flex="5"></div><div flex="5"><p>75%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="70"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Cabbage</h3></div><div flex="5"></div><div flex="5"><p>53%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="53"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Beans</h3></div><div flex="5"></div><div flex="5"><p>43%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="43"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+        </md-list>
+
+        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <div flex><md-button class="md-raised md-primary">View More</md-button></div>
+        </div>
+
+        </section>
+
+      <section>
+        <h3>Symptoms</h3>
+        <md-divider ></md-divider>
+        <p>Monthly Frequency</p>
+        <md-list>
+
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Nausea</h3></div><div flex="10"><p>10</p></div><div flex="20"><p>times</p></div>
+            </div>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Bloating</h3></div><div flex="10"><p>4</p></div><div flex="20"><p>times</p></div>
+            </div>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Gastric Reflux</h3></div><div flex="10"><p>2</p></div><div flex="20"><p>times</p></div>
+            </div>
+          </div>
+        </md-list-item>        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <div flex><md-button class="md-raised md-primary">View More</md-button></div>
+        </div>
+
+        </section>
+      </div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+
+      <!--Speed dial FAB Button -->
+      <md-fab-speed-dial md-direction="up" class="md-fling md-fab-bottom-right">
         <md-fab-trigger>
           <md-button aria-label="menu" class="md-fab md-warn">
-            <md-icon md-svg-src="img/ic_keyboard_arrow_up_black_24px.svg"></md-icon>
+            <md-icon md-svg-src="img/ic_add_white_24px.svg"></md-icon>
           </md-button>
         </md-fab-trigger>
 
         <md-fab-actions>
-          <md-button aria-label="twitter" class="md-fab md-raised md-mini">
-            <md-icon md-svg-src="img/ic_keyboard_arrow_up_black_24px.svg"></md-icon>
+          <md-button aria-label="Symptom" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left" md-visible="false"> Symptom</md-tooltip>
+            <md-icon md-svg-src="img/ic_error_outline_white_24px.svg"></md-icon> 
           </md-button>
-          <md-button aria-label="facebook" class="md-fab md-raised md-mini">
-            <md-icon md-svg-src="img/ic_keyboard_arrow_up_black_24px.svg"></md-icon>
-          </md-button>
-          <md-button aria-label="Google hangout" class="md-fab md-raised md-mini">
-            <md-icon md-svg-src="img/ic_keyboard_arrow_up_black_24px.svg"></md-icon>
+          <md-button aria-label="Meal" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left" md-visible="fallse ">Meal</md-tooltip>
+            <md-icon md-svg-src="img/ic_restaurant_menu_white_24px.svg"></md-icon>
           </md-button>
         </md-fab-actions>
       </md-fab-speed-dial>
-
-        <!-- Results tab content -->
-        </md-content>
-      </md-tab>
-    </md-tabs>
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Angular Material Dependencies -->
