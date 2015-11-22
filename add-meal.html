@@ -1,0 +1,167 @@
+<!--   
+	Project: Trackit Diet/Symptoms tracker
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="TrackIt">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width">
+	<title>TrackIt</title>
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.css">
+	<link href="css/main.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>Add Meal</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/ic_more_vert_white_24px.svg"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-content flex="90" layout-margin>
+    <div layout="row" layout-align="space-between start">
+      <div flex="30">
+        <md-datepicker ng-model="date" md-placeholder="Enter date"></md-datepicker>
+      </div>
+      <div flex="30">
+        <md-input-container>
+          <label>Time</label>
+          <input name="time" ng-model="time" placeholder="17:45" 
+          required ng-pattern="/^[0-9]{2:2}$/"></input>
+        </md-input-container>
+      </div>
+    </div>
+
+    <div layout="row" layout-align="space-around center">
+      <div flex="90">
+        <p>I ate:</p>
+      </div>
+      <div flex="10">
+        <md-button class="md-icon-button" aria-label="Search">
+          <md-icon md-svg-icon="img/ic_search_black_24px.svg"></md-icon>
+        </md-button>
+      </div>
+    </div>
+    <md-divider ></md-divider>
+
+    <md-list>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><p>Pasta Carbonara</p></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_clear_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+            
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><p>Cheese Sandwich</p></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_clear_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+    </md-list>
+
+  <div layout="row" layout-align="space-around center">
+      <div flex="90">
+        <p>I drank:</p>
+      </div>
+      <div flex="10">
+        <md-button class="md-icon-button" aria-label="Search">
+          <md-icon md-svg-icon="img/ic_search_black_24px.svg"></md-icon>
+        </md-button>
+      </div>
+    </div>
+    <md-divider ></md-divider>
+
+    <md-list>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><p>Black Tea</p></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_clear_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+            
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><p>Milk</p></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_clear_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+    </md-list>
+
+  <div layout="row" layout-align="space-around center">
+      <div flex>
+        <p>Meal eaten:</p>
+      </div>
+    </div>
+    <md-divider ></md-divider>
+    <md-checkbox ng-model="one" aria-label="Checkbox 1">
+      <p>In peace and quiet</p>
+    </md-checkbox>
+    <md-checkbox ng-model="two" aria-label="Checkbox 2">
+      <p>In a hurry and stressed</p>
+    </md-checkbox>
+    <md-checkbox ng-model="three" aria-label="Checkbox 3">
+      <p>With a quilty conscience</p>
+    </md-checkbox>
+
+  </md-content>
+
+
+
+      <!--Speed dial FAB Button 
+      <md-fab-speed-dial md-direction="up" class="md-fling md-fab-bottom-right">
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-warn">
+            <md-icon md-svg-src="img/ic_add_white_24px.svg"></md-icon>
+          </md-button>
+        </md-fab-trigger>
+
+        <md-fab-actions>
+          <md-button aria-label="Symptom" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left" md-visible="false"> Symptom</md-tooltip>
+            <md-icon md-svg-src="img/ic_error_outline_white_24px.svg"></md-icon> 
+          </md-button>
+          <md-button aria-label="Meal" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left" md-visible="fallse ">Meal</md-tooltip>
+            <md-icon md-svg-src="img/ic_restaurant_menu_white_24px.svg"></md-icon>
+          </md-button>
+        </md-fab-actions>
+      </md-fab-speed-dial> -->
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Angular Material Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-aria.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
