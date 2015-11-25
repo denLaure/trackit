@@ -17,12 +17,13 @@
 
   <md-toolbar>
     <div class="md-toolbar-tools">
-      <md-button href="index.html" class="md-icon-button" aria-label="More">
-        <md-icon md-svg-icon="img/ic_arrow_back_white_24px.svg"></md-icon>
-      </md-button>
       <h2>
-        <span>Food</span>
+        <span>TrackIt</span>
       </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/ic_more_vert_white_24px.svg"></md-icon>
+      </md-button>
     </div>
   </md-toolbar>
 
@@ -35,7 +36,7 @@
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Banana</span></div>
+                <div flex="90"><span>Black Tea</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -75,7 +76,7 @@
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Apple</span></div>
+                <div flex="90"><span>Latte Macchiato</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -101,62 +102,63 @@
 
     <md-tab label="Products">
       <md-content class="md-padding">
-        <h3 style="text-align:center">Products</h3>
+      <h3 style="text-align:center">Products</h3>
+
       <!--this is the grid for the categories 2 per row -->
-      <md-grid-list md-cols="2"  md-gutter="0.5em" md-row-height="165px">
+      <md-grid-list md-cols="2" md-gutter="1em" md-row-height="4:3">
 
         <md-grid-tile>
-          <a href="bakery.html" style="text-decoration:none;color:inherit">
-          <md-card layout-fill class="click-card">
-            <img src="img/categories/bakery.png">
-            <p style="text-align:center">Bakery</p>
-          </md-card>
-          </a>
+          <img src="img/categories/potatoes-vegetables-fruit.png"> 
+          <md-grid-tile-footer><h3>Potatoes, Vegetables and Fruit</h3></md-grid-tile-footer>
         </md-grid-tile>
+
         <md-grid-tile>
-          <md-card layout-fill>
-            <img src="img/categories/pasta-rice.png">
-            <p style="text-align:center">Pasta and Rice</p>
-          </md-card>
+          <img src="img/categories/bakery.png"> 
+          <md-grid-tile-footer><h3>Bakery</h3></md-grid-tile-footer>
         </md-grid-tile>
+
         <md-grid-tile>
-          <md-card layout-fill>
-            <img src="img/categories/candy-cookies.png">
-            <p style="text-align:center">Candy and Cookies</p>
-          </md-card>
+          <img src="img/categories/pasta-rice.png"> 
+          <md-grid-tile-footer><h3>Pasta and Rice </h3></md-grid-tile-footer>
         </md-grid-tile>
+
         <md-grid-tile>
-          <md-card layout-fill>
-            <img src="img/categories/meat-chicken.png">
-            <p style="text-align:center">Meat and Chicken</p>
-          </md-card>
-        </md-grid-tile>       
-        <md-grid-tile>
-          <md-card layout-fill>
-            <img src="img/categories/potatoes-vegetables-fruit.png">
-            <p style="text-align:center">Potatoes, Vegetables and Fruit</p>
-          </md-card>
+          <img src="img/categories/meat-chicken.png"> 
+          <md-grid-tile-footer><h3>Meat and Chicken</h3></md-grid-tile-footer>
         </md-grid-tile>
+
         <md-grid-tile>
-          <md-card layout-fill>
-            <img src="img/categories/soup-sauce.png">
-            <p style="text-align:center">Soup and Sauce</p>
-          </md-card>
+          <img src="img/categories/dairy-eggs.png"> 
+          <md-grid-tile-footer><h3>Dairy and Eggs</h3></md-grid-tile-footer>
         </md-grid-tile>
+
         <md-grid-tile>
-          <md-card layout-fill>
-            <img src="img/categories/freezer.png">
-            <p style="text-align:center">Frozen Food</p>
-          </md-card>
+          <img src="img/categories/wine.png"> 
+          <md-grid-tile-footer><h3>Alcoholic Beverages</h3></md-grid-tile-footer>
         </md-grid-tile>
+
         <md-grid-tile>
-          <md-card layout-fill>
-            <img src="img/categories/cheese-charcuterie.png">
-            <p style="text-align:center">Cheese and Charcuterie</p>
-          </md-card>
-        </md-grid-tile>       
-      </md-grid-list>
-    
+          <img src="img/categories/candy-cookies.png"> 
+          <md-grid-tile-footer><h3>Candy and Cookies</h3></md-grid-tile-footer>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <img src="img/categories/cheese-charcuterie.png"> 
+          <md-grid-tile-footer><h3>Cheese and Charcuterie</h3></md-grid-tile-footer>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <img src="img/categories/soda-juices-coffee-tea.png"> 
+          <md-grid-tile-footer><h3>Soda,Juice, Coffee and Tea</h3></md-grid-tile-footer>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <img src="img/categories/soda-juices-coffee-tea.png"> 
+          <md-grid-tile-footer><h3>Soups and Sauces</h3></md-grid-tile-footer>
+        </md-grid-tile>
+
+        </md-grid-list>
+
       </md-content>
     </md-tab>
     <md-tab label="Recipes">
