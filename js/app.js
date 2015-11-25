@@ -1,10 +1,16 @@
 var app = angular.module('TrackIt', ['ngMaterial']);
-app.config(function($mdIconProvider) {
-  $mdIconProvider
-       .icon('star', '../img/ic_stars_black_24px.svg');    // Register a specific icon (by name)
+app.controller("AppCtrl", function($scope) {
+   $scope.onResultsTabSelected = function() {
+      $("#fabButtonAdd").hide();
+   };
+   $scope.onDiaryTabSelected = function() {
+      $("#fabButtonAdd").show();
+   };
 });
 
 $(window).load(function() {
+   $(".hidden-food-intolerance-item").hide();
+   $(".hidden-symptoms-item").hide();
    $(".day-card").each(function( index ) {
       if($(this).attr("opened") === "false") {
          $(this).children(".card-content").hide();
@@ -22,5 +28,13 @@ $(window).load(function() {
          $(this).attr("opened", "true");
          $(this).children(".card-header").children(".close-card-icon").hide();
       }
+   });
+   $("#showMoreFoodIntoleranceItemsButton").click(function() {
+      $(".hidden-food-intolerance-item").show();
+      $(this).hide();
+   });
+   $("#showMoreSyptomsItemsButton").click(function() {
+      $(".hidden-symptoms-item").show();
+      $(this).hide();
    });
 });
