@@ -40,14 +40,9 @@
       </div>
     </div>
 
-    <div layout="row" layout-align="space-around center">
-      <div flex="90">
+    <div layout="row" layout-align="start center">
+      <div>
         <p>I ate:</p>
-      </div>
-      <div flex="10">
-        <md-button href="food.html" class="md-icon-button" aria-label="Search">
-          <md-icon md-svg-icon="img/ic_search_black_24px.svg"></md-icon>
-        </md-button>
       </div>
     </div>
     <md-divider ></md-divider>
@@ -74,17 +69,17 @@
             </div>
           </md-list-item>
 
+          <div layout="row" layout-align="center center">
+            <md-button href="food.html" class="md-raised" layout-fill>
+              <md-icon md-svg-icon="img/ic_add_black_24px.svg" class="close-card-icon"></md-icon>
+              Add Food
+            </md-button>
+          </div>
+
     </md-list>
 
-  <div layout="row" layout-align="space-around center">
-      <div flex="90">
+  <div layout="row" layout-align="start center">
         <p>I drank:</p>
-      </div>
-      <div flex="10">
-        <md-button href="drinks.html" class="md-icon-button" aria-label="Search">
-          <md-icon md-svg-icon="img/ic_search_black_24px.svg"></md-icon>
-        </md-button>
-      </div>
     </div>
     <md-divider ></md-divider>
 
@@ -110,6 +105,13 @@
             </div>
           </md-list-item>
 
+          <div layout="row" layout-align="center center">
+            <md-button href="drinks.html" class="md-raised" layout-fill>
+              <md-icon md-svg-icon="img/ic_add_black_24px.svg" class="close-card-icon"></md-icon>
+              Add Drink
+            </md-button>
+          </div>
+
     </md-list>
 
   <div layout="row" layout-align="space-around center">
@@ -118,15 +120,16 @@
       </div>
     </div>
     <md-divider ></md-divider>
-    <md-checkbox ng-model="one" aria-label="Checkbox 1">
-      <p>In peace and quiet</p>
-    </md-checkbox>
-    <md-checkbox ng-model="two" aria-label="Checkbox 2">
-      <p>In a hurry and stressed</p>
-    </md-checkbox>
-    <md-checkbox ng-model="three" aria-label="Checkbox 3">
-      <p>With a quilty conscience</p>
-    </md-checkbox>
+    <md-radio-group ng-model="data.group1">
+      <md-radio-button value="Peace">In peace and quiet</md-radio-button>
+      <md-radio-button value="Hurry"> In a hurry and stressed </md-radio-button>
+      <md-radio-button value="Conscience">With a guilty conscience</md-radio-button>
+    </md-radio-group>
+
+    <div layout="row" layout-align="end end">
+      <md-button class="md-raised md-primary"> Cancel </md-button>
+      <md-button class="md-raised md-primary"> Save </md-button>
+    </div>
 
   </md-content>
 

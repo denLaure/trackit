@@ -17,26 +17,25 @@
 
   <md-toolbar>
     <div class="md-toolbar-tools">
-      <h2>
-        <span>TrackIt</span>
-      </h2>
-      <span flex></span>
-      <md-button class="md-icon-button" aria-label="More">
-        <md-icon md-svg-icon="img/ic_more_vert_white_24px.svg"></md-icon>
+      <md-button href="add-meal.html" class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/ic_arrow_back_white_24px.svg"></md-icon>
       </md-button>
+      <h2>
+        <span>Drinks</span>
+      </h2>
     </div>
   </md-toolbar>
 
   <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always" md-swipe-content>
-<!--Favorites Tab-->
-    <md-tab label="Favorites">
+<!--Most Used Tab-->
+    <md-tab label="Most Used">
       <md-content class="md-padding">
         <md-list>
 
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Black Tea</span></div>
+                <div flex="90"><span>Coffee</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -46,7 +45,7 @@
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Cheese Sandwich</span></div>
+                <div flex="90"><span>Green Tea</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -56,7 +55,7 @@
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Ham and Cheese Sandwich</span></div>
+                <div flex="90"><span>Coke</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -66,7 +65,7 @@
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Pasta Carbonara</span></div>
+                <div flex="90"><span>Fanta Orange</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -76,7 +75,7 @@
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Latte Macchiato</span></div>
+                <div flex="90"><span>White Wine</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -86,7 +85,7 @@
           <md-list-item class="md-2-line">
             <div class="md-list-item-text" layout="column">
               <div layout="row">
-                <div flex="90"><span>Tomato Soup</span></div>
+                <div flex="90"><span>Cappucino</span></div>
                 <div flex="5"></div>
                 <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
               </div>
@@ -102,63 +101,37 @@
 
     <md-tab label="Products">
       <md-content class="md-padding">
-      <h3 style="text-align:center">Products</h3>
-
+        <h3 style="text-align:center">Products</h3>
       <!--this is the grid for the categories 2 per row -->
-      <md-grid-list md-cols="2" md-gutter="1em" md-row-height="4:3">
+      <md-grid-list md-cols="2"  md-gutter="0.5em" md-row-height="200px">
 
         <md-grid-tile>
-          <img src="img/categories/potatoes-vegetables-fruit.png"> 
-          <md-grid-tile-footer><h3>Potatoes, Vegetables and Fruit</h3></md-grid-tile-footer>
+          <md-card layout-fill class="click-card">
+            <img src="img/categories/drinks/tea-coffee.jpg">
+            <p style="text-align:center">Tea and Cofee</p>
+          </md-card>
         </md-grid-tile>
-
         <md-grid-tile>
-          <img src="img/categories/bakery.png"> 
-          <md-grid-tile-footer><h3>Bakery</h3></md-grid-tile-footer>
+          <md-card layout-fill>
+            <img src="img/categories/drinks/juice.jpeg">
+            <p style="text-align:center">Juice</p>
+          </md-card>
         </md-grid-tile>
-
         <md-grid-tile>
-          <img src="img/categories/pasta-rice.png"> 
-          <md-grid-tile-footer><h3>Pasta and Rice </h3></md-grid-tile-footer>
+          <md-card layout-fill>
+            <img src="img/categories/drinks/soda.jpg">
+            <p style="text-align:center">Soda</p>
+          </md-card>
         </md-grid-tile>
-
         <md-grid-tile>
-          <img src="img/categories/meat-chicken.png"> 
-          <md-grid-tile-footer><h3>Meat and Chicken</h3></md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-          <img src="img/categories/dairy-eggs.png"> 
-          <md-grid-tile-footer><h3>Dairy and Eggs</h3></md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-          <img src="img/categories/wine.png"> 
-          <md-grid-tile-footer><h3>Alcoholic Beverages</h3></md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-          <img src="img/categories/candy-cookies.png"> 
-          <md-grid-tile-footer><h3>Candy and Cookies</h3></md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-          <img src="img/categories/cheese-charcuterie.png"> 
-          <md-grid-tile-footer><h3>Cheese and Charcuterie</h3></md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-          <img src="img/categories/soda-juices-coffee-tea.png"> 
-          <md-grid-tile-footer><h3>Soda,Juice, Coffee and Tea</h3></md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-          <img src="img/categories/soda-juices-coffee-tea.png"> 
-          <md-grid-tile-footer><h3>Soups and Sauces</h3></md-grid-tile-footer>
-        </md-grid-tile>
-
-        </md-grid-list>
-
+          <md-card layout-fill>
+            <img src="img/categories/drinks/alcohol.jpg">
+            <p style="text-align:center">Alcohol</p>
+          </md-card>
+        </md-grid-tile>       
+        <md-grid-tile>    
+      </md-grid-list>
+    
       </md-content>
     </md-tab>
     <md-tab label="Recipes">
