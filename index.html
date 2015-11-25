@@ -296,7 +296,7 @@
     </md-tabs>
 
 	<!--Speed dial FAB Button -->
-	<md-fab-speed-dial id="fabButtonAdd" md-direction="up" class="md-fling md-fab md-fab-bottom-right">
+	<md-fab-speed-dial md-open="AppCtrl.isFabOpen" id="fabButtonAdd" md-direction="up" class="md-fling md-fab md-fab-bottom-right">
 	<md-fab-trigger>
 	  <md-button aria-label="menu" class="md-fab md-warn">
 	    <md-icon md-svg-src="img/ic_add_white_24px.svg"></md-icon>
@@ -305,11 +305,11 @@
 
 	<md-fab-actions>
 	  <md-button href="add-symptom.html" aria-label="Symptom" class="md-fab md-raised md-mini">
-	    <md-tooltip md-direction="left" md-visible="false">Symptom</md-tooltip>
+	    <md-tooltip md-direction="left" md-visible="fabTooltipVisible">Symptom</md-tooltip>
 	    <md-icon md-svg-src="img/ic_error_outline_black_24px.svg"></md-icon> 
 	  </md-button>
 	  <md-button href="add-meal.html" aria-label="Meal" class="md-fab md-raised md-mini">
-	    <md-tooltip md-direction="left" md-visible="false">Meal</md-tooltip>
+	    <md-tooltip md-direction="left" md-visible="fabTooltipVisible">Meal</md-tooltip>
 	    <md-icon md-svg-src="img/ic_restaurant_menu_black_24px.svg"></md-icon>
 	  </md-button>
 	</md-fab-actions>

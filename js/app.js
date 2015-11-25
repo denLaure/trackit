@@ -1,11 +1,20 @@
 var app = angular.module('TrackIt', ['ngMaterial']);
-app.controller("AppCtrl", function($scope) {
+app.controller("AppCtrl", function($scope, $timeout) {
    $scope.onResultsTabSelected = function() {
       $("#fabButtonAdd").hide();
    };
    $scope.onDiaryTabSelected = function() {
       $("#fabButtonAdd").show();
    };
+   $scope.$watch('AppCtrl.isFabOpen', function(isFabOpen) {
+      if (isFabOpen) {
+         $timeout(function() {
+            $scope.fabTooltipVisible = isFabOpen;
+         }, 350);
+      } else {
+         $scope.fabTooltipVisible = isFabOpen;
+      }
+   });
 });
 
 $(window).load(function() {
