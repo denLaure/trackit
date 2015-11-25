@@ -4,6 +4,7 @@
 
  md-whiteframe {
     padding: 16px;
+    margin-bottom: 16px;
  }
 
  .md-padding {
@@ -17,4 +18,25 @@
 
 .card-header {
     width: 100%;
+}
+
+.time {
+    padding-right: 8px;
+    border-right: solid #c2c2c2;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.diary-item {
+    padding: 8px;
+    margin-left: 16px;
+}
+
+.card-content {
+    width: 100%;
+    margin-top: 16px;
+}
+
+md-fab-speed-dial {
+    position: fixed !important;
 }
