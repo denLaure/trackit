@@ -38,13 +38,13 @@
     <p>Butter</p>
     <p>Salad</p>
 
-    <!--Temporary Button-->
-    <div layout="row" layout-align="center center">
-      <md-button href="edit-recipe.html" class="md-raised" layout-fill>
-        <md-icon md-svg-icon="img/ic_add_black_24px.svg" class="close-card-icon"></md-icon>
-        Edit
-      </md-icon>
-    </div>
+    <md-fab-speed-dial md-direction="up" class="md-fling md-fab md-fab-bottom-right">
+    <md-fab-trigger>
+      <md-button href="edit-recipe.html" aria-label="edit" class="md-fab md-warn">
+        <md-icon md-svg-src="img/ic_edit_white_24px.svg"></md-icon>
+      </md-button>
+    </md-fab-trigger>
+    </md-fab-speed-dial>
 
   </md-content>
 

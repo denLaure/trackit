@@ -1,11 +1,20 @@
 var app = angular.module('TrackIt', ['ngMaterial']);
-app.controller("AppCtrl", function($scope) {
+app.controller("AppCtrl", function($scope, $timeout) {
    $scope.onResultsTabSelected = function() {
       $("#fabButtonAdd").hide();
    };
    $scope.onDiaryTabSelected = function() {
       $("#fabButtonAdd").show();
    };
+   $scope.$watch('AppCtrl.isFabOpen', function(isFabOpen) {
+      if (isFabOpen) {
+         $timeout(function() {
+            $scope.fabTooltipVisible = isFabOpen;
+         }, 350);
+      } else {
+         $scope.fabTooltipVisible = isFabOpen;
+      }
+   });
 });
 
 $(window).load(function() {
@@ -36,5 +45,10 @@ $(window).load(function() {
    $("#showMoreSyptomsItemsButton").click(function() {
       $(".hidden-symptoms-item").show();
       $(this).hide();
+   });
+   $(".food-intolerance-item").click(function() {
+      var meal = $(this).find("h3").text();
+      var percents = $(this).find("md-progress-linear").attr("value");
+      window.open("meal-statistics.html?meal=" + meal + "&percents=" + percents,"_self");
    });
 });
