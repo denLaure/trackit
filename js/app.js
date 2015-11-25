@@ -46,4 +46,9 @@ $(window).load(function() {
       $(".hidden-symptoms-item").show();
       $(this).hide();
    });
+   $(".food-intolerance-item").click(function() {
+      var meal = $(this).find("h3").text();
+      var percents = $(this).find("md-progress-linear").attr("value");
+      window.open("meal-statistics.html?meal=" + meal + "&percents=" + percents,"_self");
+   });
 });
