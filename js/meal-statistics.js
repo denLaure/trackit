@@ -1,7 +1,14 @@
 var app = angular.module('TrackIt', ['ngMaterial']);
+var meal = "";
+var percents = 50;
+app.controller("AppCtrl", ['$scope', function($scope) {
+    getParameters();
+    $scope.percents = percents;
+    $scope.meal = meal;
+}]);
 
-$(window).load(function() {
-    /** Get parameters passed wia search field. */
+/** Get parameters passed wia search field. */
+function getParameters() {
     var query = location.search.substring(1);
     var parameters = {};
     var keyValues = query.split(/&/);
@@ -11,8 +18,11 @@ $(window).load(function() {
         var value = keyValuePairs[1];
         parameters[key] = value;
     });
-    var meal = parameters['meal'];
-    var percents = parameters['percents'];
+    meal = parameters['meal'];
+    percents = parameters['percents'];
+}
 
-    $("#toolbarTitle").html(parameters['meal']);
+$(window).load(function() {
+    $("#toolbarTitle").html(meal);
+    $("#percentsText").html(percents + "%");
 });

@@ -13,18 +13,43 @@
     <link href="css/main.css" type="text/css" rel="stylesheet"/>
 </head>
 
-<body>
+<body ng-controller="AppCtrl">
 
   <md-toolbar>
     <div class="md-toolbar-tools">
       <md-button href="index.html" class="md-icon-button" aria-label="More">
-        <md-icon md-svg-icon="img/ic_clear_white_24px.svg"></md-icon>
+        <md-icon md-svg-icon="img/ic_arrow_back_white_24px.svg"></md-icon>
       </md-button>
       <h2>
         <span id="toolbarTitle"></span>
       </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/ic_more_vert_white_24px.svg"></md-icon>
+      </md-button>
     </div>
   </md-toolbar>
+
+  <md-content layout-margin>
+  <div layout="row" layout-align="space-around center">
+    <div flex="80">
+      <md-progress-linear md-mode="determinate" value="{{percents}}">
+    </div>
+    <span flex></span>
+    <div flex="10">
+      <p id="percentsText"></p>
+    </div>
+  </div>
+  <p>
+    {{percents}}% of the time you consume food & drinks containing {{meal}}, you feel bad. We suggest to avoid it.
+  </p>
+  </br>
+  <h3>Days when {{meal}} caused problems</h3>
+  <md-divider ></md-divider>
+  </br>
+  <h3>Monthly trends</h3>
+  <md-divider ></md-divider>
+  </md-content>
 
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <!-- Angular Material Dependencies -->
