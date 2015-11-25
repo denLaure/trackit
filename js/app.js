@@ -1,7 +1,11 @@
 var app = angular.module('TrackIt', ['ngMaterial']);
-app.config(function($mdIconProvider) {
-  $mdIconProvider
-       .icon('star', '../img/ic_stars_black_24px.svg');    // Register a specific icon (by name)
+app.controller("AppCtrl", function($scope) {
+   $scope.onResultsTabSelected = function() {
+      $("#fabButtonAdd").hide();
+   };
+   $scope.onDiaryTabSelected = function() {
+      $("#fabButtonAdd").show();
+   };
 });
 
 $(window).load(function() {
