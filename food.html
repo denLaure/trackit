@@ -1,0 +1,199 @@
+<!--   
+	Project: Trackit Diet/Symptoms tracker
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="TrackIt">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width">
+	<title>TrackIt</title>
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.css">
+	<link href="css/main.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button href="index.html" class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/ic_arrow_back_white_24px.svg"></md-icon>
+      </md-button>
+      <h2>
+        <span>Food</span>
+      </h2>
+    </div>
+  </md-toolbar>
+
+  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always" md-swipe-content>
+<!--Favorites Tab-->
+    <md-tab label="Favorites">
+      <md-content class="md-padding">
+        <md-list>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><span>Banana</span></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+            
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><span>Cheese Sandwich</span></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><span>Ham and Cheese Sandwich</span></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><span>Pasta Carbonara</span></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+            
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><span>Apple</span></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><span>Tomato Soup</span></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_add_box_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+
+        </md-list>
+
+      </md-content>
+    </md-tab>
+
+
+    <md-tab label="Products">
+      <md-content class="md-padding">
+        <h3 style="text-align:center">Products</h3>
+      <!--this is the grid for the categories 2 per row -->
+      <md-grid-list md-cols="2"  md-gutter="0.5em" md-row-height="165px">
+
+        <md-grid-tile>
+          <a href="bakery.html" style="text-decoration:none;color:inherit">
+          <md-card layout-fill class="click-card">
+            <img src="img/categories/bakery.png">
+            <p style="text-align:center">Bakery</p>
+          </md-card>
+          </a>
+        </md-grid-tile>
+        <md-grid-tile>
+          <md-card layout-fill>
+            <img src="img/categories/pasta-rice.png">
+            <p style="text-align:center">Pasta and Rice</p>
+          </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+          <md-card layout-fill>
+            <img src="img/categories/candy-cookies.png">
+            <p style="text-align:center">Candy and Cookies</p>
+          </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+          <md-card layout-fill>
+            <img src="img/categories/meat-chicken.png">
+            <p style="text-align:center">Meat and Chicken</p>
+          </md-card>
+        </md-grid-tile>       
+        <md-grid-tile>
+          <md-card layout-fill>
+            <img src="img/categories/potatoes-vegetables-fruit.png">
+            <p style="text-align:center">Potatoes, Vegetables and Fruit</p>
+          </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+          <md-card layout-fill>
+            <img src="img/categories/soup-sauce.png">
+            <p style="text-align:center">Soup and Sauce</p>
+          </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+          <md-card layout-fill>
+            <img src="img/categories/freezer.png">
+            <p style="text-align:center">Frozen Food</p>
+          </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+          <md-card layout-fill>
+            <img src="img/categories/cheese-charcuterie.png">
+            <p style="text-align:center">Cheese and Charcuterie</p>
+          </md-card>
+        </md-grid-tile>       
+      </md-grid-list>
+    
+      </md-content>
+    </md-tab>
+    <md-tab label="Recipes">
+      <md-content class="md-padding">
+      </md-content>
+    </md-tab>
+  </md-tabs>
+
+      <!--Speed dial FAB Button 
+      <md-fab-speed-dial md-direction="up" class="md-fling md-fab-bottom-right">
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-warn">
+            <md-icon md-svg-src="img/ic_add_white_24px.svg"></md-icon>
+          </md-button>
+        </md-fab-trigger>
+
+        <md-fab-actions>
+          <md-button aria-label="Symptom" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left" md-visible="false"> Symptom</md-tooltip>
+            <md-icon md-svg-src="img/ic_error_outline_white_24px.svg"></md-icon> 
+          </md-button>
+          <md-button aria-label="Meal" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left" md-visible="fallse ">Meal</md-tooltip>
+            <md-icon md-svg-src="img/ic_restaurant_menu_white_24px.svg"></md-icon>
+          </md-button>
+        </md-fab-actions>
+      </md-fab-speed-dial> -->
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Angular Material Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-aria.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
