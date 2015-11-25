@@ -1,0 +1,62 @@
+<!--   
+	Project: Trackit Diet/Symptoms tracker
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="TrackIt">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width">
+	<title>TrackIt</title>
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.css">
+	<link href="css/main.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body ng-controller="AppCtrl">
+
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button href="food.html" class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/ic_arrow_back_white_24px.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span>Cheese Sandwich</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/ic_delete_white_24px.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-content layout-margin>
+      <h4>Ingredients</h4>
+    <md-divider></md-divider>
+
+    <p>White Bread</p>
+    <p>Cheese</p>
+    <p>Butter</p>
+    <p>Salad</p>
+
+    <!--Temporary Button-->
+    <div layout="row" layout-align="center center">
+      <md-button href="edit-recipe.html" class="md-raised" layout-fill>
+        <md-icon md-svg-icon="img/ic_add_black_24px.svg" class="close-card-icon"></md-icon>
+        Edit
+      </md-icon>
+    </div>
+
+  </md-content>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-aria.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc4/angular-material.min.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>
