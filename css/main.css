@@ -40,3 +40,9 @@
 md-fab-speed-dial {
     position: fixed !important;
 }
+
+.buttons-box {
+    margin-top: 24px;
+    margin-right: 0; 
+    margin-left: 0;
+}

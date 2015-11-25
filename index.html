@@ -13,7 +13,7 @@
 	<link href="css/main.css" type="text/css" rel="stylesheet"/>
 </head>
 
-<body>
+<body ng-controller="AppCtrl">
 
     <md-toolbar>
       <div class="md-toolbar-tools">
@@ -28,7 +28,7 @@
     </md-toolbar>
 
     <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always" md-swipe-content>
-      <md-tab label="diary">
+      <md-tab label="diary" md-on-select="onDiaryTabSelected()">
         <md-content class="md-padding">
         
 		    <md-whiteframe md-ink-ripple class="md-whiteframe-1dp day-card" flex="100" layout="column" layout-align="center center" opened="true">
@@ -146,7 +146,7 @@
 
         </md-content>
       </md-tab>
-      <md-tab label="results">
+      <md-tab label="results" md-on-select="onResultsTabSelected()">
         <md-content class="md-padding">
 <!-- Results tab content -->
         <div layout="column" flex="90" layout-margin>
@@ -195,10 +195,49 @@
             </div>
           </md-list-item>
 
+          <md-list-item class="md-2-line hidden-food-intolerance-item">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Ham</h3></div><div flex="5"></div><div flex="5"><p>39%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="39"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line hidden-food-intolerance-item">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Chicken</h3></div><div flex="5"></div><div flex="5"><p>33%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="33"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-2-line hidden-food-intolerance-item">
+            <div class="md-list-item-text" layout="column">
+              <div layout="row">
+                <div flex="90"><h3>Bread</h3></div><div flex="5"></div><div flex="5"><p>27%</p></div>
+              </div>
+              <div layout="row">
+                <div flex="90"><md-progress-linear md-mode="determinate" value="27"></md-progress-linear></div>
+                <div flex="5"></div>
+                <div flex="5"><md-icon md-svg-icon="img/ic_arrow_drop_down_black_24px.svg" class="close-card-icon"></md-icon></div>
+              </div>
+            </div>
+          </md-list-item>
+
         </md-list>
 
         <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-          <div flex><md-button class="md-raised md-primary">View More</md-button></div>
+          <div flex><md-button id="showMoreFoodIntoleranceItemsButton" class="md-raised md-primary">View More</md-button></div>
         </div>
 
         </section>
@@ -229,8 +268,25 @@
               <div flex="70"><h3>Gastric Reflux</h3></div><div flex="10"><p>2</p></div><div flex="20"><p>times</p></div>
             </div>
           </div>
-        </md-list-item>        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-          <div flex><md-button class="md-raised md-primary">View More</md-button></div>
+        </md-list-item>
+        <md-list-item class="md-2-line hidden-symptoms-item">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Bloating</h3></div><div flex="10"><p>1</p></div><div flex="20"><p>time</p></div>
+            </div>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-2-line hidden-symptoms-item">
+          <div class="md-list-item-text" layout="column">
+            <div layout="row">
+              <div flex="70"><h3>Hayfewer</h3></div><div flex="10"><p>1</p></div><div flex="20"><p>time</p></div>
+            </div>
+          </div>
+        </md-list-item>
+        </md-list>      
+
+        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <div flex><md-button id="showMoreSyptomsItemsButton" class="md-raised md-primary">View More</md-button></div>
         </div>
 
         </section>
@@ -240,7 +296,7 @@
     </md-tabs>
 
 	<!--Speed dial FAB Button -->
-	<md-fab-speed-dial md-direction="up" class="md-fling md-fab md-fab-bottom-right">
+	<md-fab-speed-dial id="fabButtonAdd" md-direction="up" class="md-fling md-fab md-fab-bottom-right">
 	<md-fab-trigger>
 	  <md-button aria-label="menu" class="md-fab md-warn">
 	    <md-icon md-svg-src="img/ic_add_white_24px.svg"></md-icon>
@@ -248,13 +304,13 @@
 	</md-fab-trigger>
 
 	<md-fab-actions>
-	  <md-button aria-label="Symptom" class="md-fab md-raised md-mini">
+	  <md-button href="add-symptom.html" aria-label="Symptom" class="md-fab md-raised md-mini">
 	    <md-tooltip md-direction="left" md-visible="false">Symptom</md-tooltip>
-	    <md-icon md-svg-src="img/ic_error_outline_white_24px.svg"></md-icon> 
+	    <md-icon md-svg-src="img/ic_error_outline_black_24px.svg"></md-icon> 
 	  </md-button>
 	  <md-button href="add-meal.html" aria-label="Meal" class="md-fab md-raised md-mini">
 	    <md-tooltip md-direction="left" md-visible="false">Meal</md-tooltip>
-	    <md-icon md-svg-src="img/ic_restaurant_menu_white_24px.svg"></md-icon>
+	    <md-icon md-svg-src="img/ic_restaurant_menu_black_24px.svg"></md-icon>
 	  </md-button>
 	</md-fab-actions>
 	</md-fab-speed-dial>
